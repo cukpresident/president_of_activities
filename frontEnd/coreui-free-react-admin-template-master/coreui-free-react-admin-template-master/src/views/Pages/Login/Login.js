@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,withRouter } from 'react-router-dom';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { inject, observer } from 'mobx-react';
 
+@inject('user')
+@observer
+@withRouter
 class Login extends Component {
+  constructor(props){
+    super(props);
+  }
+  handleSubmitForm=(e)=>{
+    e.preventDefault();
+    this.props.user.login("llmooon","hello");
+    this.props.history.push('/mypage');
+  };
   render() {
     return (
       <div className="app flex-row align-items-center">
@@ -12,7 +24,7 @@ class Login extends Component {
               <CardGroup>
                 <Card className="p-4">
                   <CardBody>
-                    <Form>
+                    <Form onSubmit={this.handleSubmitForm}>
                       <h1>Login</h1>
                       <p className="text-muted">Sign In to your account</p>
                       <InputGroup className="mb-3">
@@ -33,7 +45,7 @@ class Login extends Component {
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                          <Button color="primary" className="px-4">Login</Button>
+                          <Button color="primary" type="submit" className="px-4">Login</Button>
                         </Col>
                         <Col xs="6" className="text-right">
                           <Button color="link" className="px-0">Forgot password?</Button>
