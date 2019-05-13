@@ -50,10 +50,12 @@ class DefaultLayout extends Component {
             <AppSidebarFooter />
             <AppSidebarMinimizer />
           </AppSidebar>
+
           <main className="main">
             <AppBreadcrumb appRoutes={routes}/>
             <Container fluid>
               <Suspense fallback={this.loading()}>
+          
                 <Switch>
                   {routes.map((route, idx) => {
                     return route.component ? (
@@ -67,11 +69,15 @@ class DefaultLayout extends Component {
                         )} />
                     ) : (null);
                   })}
+
+
                   <Redirect from="/" to="/dashboard" />
                 </Switch>
               </Suspense>
             </Container>
           </main>
+
+          
           <AppAside fixed>
             <Suspense fallback={this.loading()}>
               <DefaultAside />
