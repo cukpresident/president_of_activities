@@ -14,11 +14,14 @@ import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import {
   AppHeader,
 } from '@coreui/react';
+import { inject, observer } from 'mobx-react';
 
 const DefaultHeader = React.lazy(() => import('./HomeHeader'));
 
 
 
+@inject('user')
+@observer
 class Mypagedetail extends Component {
   constructor(props) {
     super(props);
@@ -85,6 +88,7 @@ class Mypagedetail extends Component {
 
 
   render() {
+    const {user} = this.props.user;
     return (    
         <div className="animated fadeIn">
             <Row>
@@ -99,7 +103,7 @@ class Mypagedetail extends Component {
             <Col xs="12" lg="12">
                   <Card>
                   <CardHeader>
-                    <h5>about me</h5>
+                    <h5>about {this.props.user.username}</h5>
                   </CardHeader>
                   <CardBody>
                     <Row>
