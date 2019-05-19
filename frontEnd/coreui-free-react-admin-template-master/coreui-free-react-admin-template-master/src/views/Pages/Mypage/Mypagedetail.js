@@ -16,6 +16,8 @@ import {
 } from '@coreui/react';
 import { inject, observer } from 'mobx-react';
 
+import './Mypage.css';
+
 const MyinfoDetail = React.lazy(()=>import('./MyInfoDetail'));
 const DefaultHeader = React.lazy(() => import('./HomeHeader'));
 
@@ -89,7 +91,7 @@ class Mypagedetail extends Component {
 
 
   render() {
-    const {user} = this.props.user;
+    const { user } = this.props;
     return (    
         <div className="animated fadeIn">
             <Row>
@@ -103,8 +105,8 @@ class Mypagedetail extends Component {
 
             <Col xs="12" lg="12">
                   <Card>
-                  <CardHeader>
-                    <h5>about {this.props.user.username}</h5>
+                  <CardHeader style={{backgroundColor: "#e6ee9c"}}>
+                    <h5>about {user.username}</h5>
                   </CardHeader>
                   <CardBody>
                     <Row>
