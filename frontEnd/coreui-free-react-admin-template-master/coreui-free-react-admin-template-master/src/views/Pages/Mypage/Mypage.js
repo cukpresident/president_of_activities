@@ -24,8 +24,6 @@ import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import {
   AppHeader,
 } from '@coreui/react';
-import { inject } from 'mobx-react';
-import { observable } from 'mobx';
 
 const DefaultHeader = React.lazy(() => import('./HomeHeader'));
 
