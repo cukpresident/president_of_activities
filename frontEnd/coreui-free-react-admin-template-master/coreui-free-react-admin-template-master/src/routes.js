@@ -1,5 +1,11 @@
 import React from 'react';
 
+const Members = React.lazy(() => import('./views/Members/Team'));
+const Todo = React.lazy(() => import('./views/Todo'));
+const Team = React.lazy(() => import('./views/Team'));
+
+
+
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
 const Carousels = React.lazy(() => import('./views/Base/Carousels'));
@@ -38,6 +44,12 @@ const User = React.lazy(() => import('./views/Users/User'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
+  { path: '/members', name: 'Members', component: Members },
+  { path: '/todo', name: 'Todo', component: Todo },
+  { path: '/team', name: 'Team', component: Team },
+
+
+  
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
