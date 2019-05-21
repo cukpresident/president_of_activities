@@ -6,7 +6,7 @@ import {
 
 const DefaultHeader = React.lazy(() => import('./HomeHeader_Login'));
 
-{/* 로그인 안했을때!! */}
+{/* 로그인 했을때!! */}
 class Home2 extends Component {
   
   render() {

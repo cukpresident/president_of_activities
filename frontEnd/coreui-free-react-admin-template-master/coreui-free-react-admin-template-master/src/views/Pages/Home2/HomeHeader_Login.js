@@ -26,28 +26,28 @@ class HomeHeader_Login extends Component {
           full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
         />
-        <AppSidebarToggler className="d-md-down-none" display="lg" />
+        <AppSidebarToggler/>
+        
+        {/* //  className="d-md-down-none"/>  */}
+        {/* display="lg" /> */}
 
         <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">
-            <NavLink to="/dashboard" className="nav-link" >뭐할까?</NavLink>
+            <NavLink to="/dashboard" className="nav-link" >프로젝트 둘러보기</NavLink>
           </NavItem>
           <NavItem className="px-3">
-            <Link to="/users" className="nav-link">없앨까?</Link>
-          </NavItem>
-          <NavItem className="px-3">
-            <NavLink to="#" className="nav-link">Settings</NavLink>
+            <Link to="/users" className="nav-link">프로젝트 생성</Link>
           </NavItem>
         </Nav>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink to="../login">
-          <img src={'../../assets/img/avatars/9.PNG'} width="50px" height="50px" className="img-avatar" alt="admin@bootstrapmaster.com" />
-            </NavLink>
+          <Link to="/mypage">
+            <button type="button" class="btn btn-ghost-primary">pass333님!  </button>
+            </Link>
           </NavItem>
         </Nav>
-        <AppAsideToggler className="d-md-down-none" />
-        {/*<AppAsideToggler className="d-lg-none" mobile />*/}
+        
+
       </React.Fragment>
     );
   }
