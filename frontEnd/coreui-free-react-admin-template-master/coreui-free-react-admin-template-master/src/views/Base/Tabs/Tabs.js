@@ -13,8 +13,50 @@ class Tabs extends Component {
     };
   }
 
-  lorem() {
-    return 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.'
+  Will_do() {
+    return(
+      <React.Fragment>
+      <ul>
+        <h5><li><input type="checkbox" value="1"></input> &nbsp; WilldoList1</li></h5>
+        <h5><li><input type="checkbox" value="2"></input> &nbsp; WilldoList2</li></h5>
+        <h5><li><input type="checkbox" value="3"></input> &nbsp; WilldoList3</li></h5>
+        <h5><li><input type="checkbox" value="4"></input> &nbsp; WilldoList4</li></h5>
+        <h5><li><input type="checkbox" value="5"></input> &nbsp; WilldoList5</li></h5>
+        <h5><li><input type="checkbox" value="6"></input> &nbsp; WilldoList6</li></h5>
+      </ul>
+      </React.Fragment>
+    );
+  }
+  Done() {
+    return(
+      <React.Fragment>
+      <ul>
+      <h5><li><input type="checkbox" value="1"></input> &nbsp; doneList1</li></h5>
+        <h5><li><input type="checkbox" value="2"></input> &nbsp; doneList2</li></h5>
+        <h5><li><input type="checkbox" value="3"></input> &nbsp; doneList3</li></h5>
+        <h5><li><input type="checkbox" value="4"></input> &nbsp; doneList4</li></h5>
+        <h5><li><input type="checkbox" value="5"></input> &nbsp; doneList5</li></h5>
+        <h5><li><input type="checkbox" value="6"></input> &nbsp; doneList6</li></h5>
+        <h5><li><input type="checkbox" value="7"></input> &nbsp; doneList7</li></h5>
+        <h5><li><input type="checkbox" value="8"></input> &nbsp; doneList8</li></h5>
+      </ul>
+      </React.Fragment>
+    );
+  }
+  Do() {
+    return(
+      <React.Fragment>
+      <ul>
+        <h5><li><input type="checkbox" value="1"></input> &nbsp; TodoList1</li></h5>
+        <h5><li><input type="checkbox" value="2"></input> &nbsp; TodoList2</li></h5>
+        <h5><li><input type="checkbox" value="3"></input> &nbsp; TodoList3</li></h5>
+        <h5><li><input type="checkbox" value="4"></input> &nbsp; TodoList4</li></h5>
+        <h5><li><input type="checkbox" value="5"></input> &nbsp; TodoList5</li></h5>
+        <h5><li><input type="checkbox" value="6"></input> &nbsp; TodoList6</li></h5>
+        <br/><br/><br/><br/><br/>
+      </ul>
+      </React.Fragment>
+    );
   }
 
   toggle(tabPane, tab) {
@@ -29,13 +71,13 @@ class Tabs extends Component {
     return (
       <>
         <TabPane tabId="1">
-          {`1. ${this.lorem()}`}
+          {this.Will_do()}
         </TabPane>
         <TabPane tabId="2">
-          {`2. ${this.lorem()}`}
+          {this.Done()}
         </TabPane>
         <TabPane tabId="3">
-          {`3. ${this.lorem()}`}
+          {this.Do()}
         </TabPane>
       </>
     );
@@ -45,14 +87,14 @@ class Tabs extends Component {
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xs="12" md="6" className="mb-4">
+          <Col xs="12" md="2" className="mb-4">
             <Nav tabs>
               <NavItem>
                 <NavLink
                   active={this.state.activeTab[0] === '1'}
                   onClick={() => { this.toggle(0, '1'); }}
                 >
-                  Home
+                  Will do
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -60,7 +102,7 @@ class Tabs extends Component {
                   active={this.state.activeTab[0] === '2'}
                   onClick={() => { this.toggle(0, '2'); }}
                 >
-                  Profile
+                  Done
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -68,7 +110,7 @@ class Tabs extends Component {
                   active={this.state.activeTab[0] === '3'}
                   onClick={() => { this.toggle(0, '3'); }}
                 >
-                  Messages
+                  Do
                 </NavLink>
               </NavItem>
             </Nav>
@@ -76,6 +118,9 @@ class Tabs extends Component {
               {this.tabPane()}
             </TabContent>
           </Col>
+          <br/><br/>&nbsp;&nbsp;
+          <iframe frameBorder="1" scrolling="no" name="Do_List" width="80%" height="710" name="DetailList"></iframe>
+          {/*
           <Col xs="12" md="6" className="mb-4">
             <Nav tabs>
               <NavItem>
@@ -173,7 +218,7 @@ class Tabs extends Component {
             <TabContent activeTab={this.state.activeTab[3]}>
               {this.tabPane()}
             </TabContent>
-          </Col>
+          </Col>*/}
         </Row>
       </div>
     );

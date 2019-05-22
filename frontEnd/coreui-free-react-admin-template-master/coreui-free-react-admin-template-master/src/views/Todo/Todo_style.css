@@ -1,0 +1,29 @@
+.Todo_header {
+    border-radius: 2px;
+    display : inline-block;
+    text-align: left;
+    vertical-align: middle;
+    width : 100%;
+    height : 100%;
+    background-color :gray;
+    color:whitesmoke;
+    margin-bottom : 10px;
+}
+.NameBox {
+    display : inline-block;
+    border-radius: 2px;
+    background-color :darkgray;
+    margin:5px;
+    width:10%;
+    text-align: center;
+    font-size: 30px;
+}
+form{
+    font-size:30px;
+    display:inline-block;
+}
+form > select{
+    border-radius:2px;
+    background-color:darkgray;
+    border-style: none;
+}
