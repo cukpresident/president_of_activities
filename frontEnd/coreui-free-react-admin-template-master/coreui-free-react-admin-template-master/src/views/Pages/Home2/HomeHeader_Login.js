@@ -33,7 +33,7 @@ class HomeHeader_Login extends Component {
 
         <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">
-            <NavLink to="/dashboard" className="nav-link" >프로젝트 둘러보기</NavLink>
+          <NavLink to="/show" className="nav-link" >프로젝트 둘러보기</NavLink>            
           </NavItem>
           <NavItem className="px-3">
             <Link to="/users" className="nav-link">프로젝트 생성</Link>
