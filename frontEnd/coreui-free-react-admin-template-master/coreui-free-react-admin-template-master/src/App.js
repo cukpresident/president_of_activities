@@ -16,6 +16,10 @@ const Login = React.lazy(() => import('./views/Pages/Login'));
 const Register = React.lazy(() => import('./views/Pages/Register'));
 const Page404 = React.lazy(() => import('./views/Pages/Page404'));
 const Page500 = React.lazy(() => import('./views/Pages/Page500'));
+const Create = React.lazy(() => import('./views/Pages/Create'));
+const Create2 = React.lazy(() => import('./views/Pages/Create2'));
+
+
 
 class App extends Component {
 
@@ -31,6 +35,10 @@ class App extends Component {
               <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />
               <Route exact path="/404" name="Page 404" render={props => <Page404 {...props}/>} />
               <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
+              <Route exact path="/create" name="Create" render={props => <Create {...props}/>} />
+              <Route exact path="/create2" name="Creat2" render={props => <Create2 {...props}/>} />
+
+
               <Route path="/" name="Home" render={props => <DefaultLayout {...props}/>} />
             </Switch>
           </React.Suspense>
