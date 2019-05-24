@@ -28,7 +28,7 @@ class HomeHeader extends Component {
         />
         {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
 
-        <Nav className="d-md-down-none" navbar>
+        <Nav className="d-md-down" navbar>
           <NavItem className="px-3">
             <NavLink to="/dashboard" className="nav-link" >뭐할까?</NavLink>
           </NavItem>
