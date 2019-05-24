@@ -9,7 +9,7 @@ class Dashboard extends Component {
 
     return (
       <div className="animated fadeIn">
-      hello
+      hello team
 
       </div>
     );
