@@ -2,11 +2,8 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
 import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink,Collapse, Row, Table } from 'reactstrap';
-import {
-  
-  Button,
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-} from 'reactstrap';
 import MyProjectDetail from './MyProjectListDetail';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
@@ -106,62 +103,41 @@ class Mypagedetail extends Component {
             
                       <Col xs="12" lg="2"> 
                       <img src={'assets/img/avatars/8.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
+                      <br/>
+                      
+                      <Button color="link" size="lg">대표 이미지 변경하기</Button>
+              
                       </Col>
                       <Col xs="12" lg = "10">
                         
-                      <Table responsive>
-                        <thead>
-                        <tr>
-                          <th>Username</th>
-                          <th>Date registered</th>
-                          <th>Role</th>
-                          <th>Status</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                          <td>Samppa Nori</td>
-                          <td>2012/01/01</td>
-                          <td>Member</td>
-                          <td>
-                            <Badge color="success">Active</Badge>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Estavan Lykos</td>
-                          <td>2012/02/01</td>
-                          <td>Staff</td>
-                          <td>
-                            <Badge color="danger">Banned</Badge>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Chetan Mohamed</td>
-                          <td>2012/02/01</td>
-                          <td>Admin</td>
-                          <td>
-                            <Badge color="secondary">Inactive</Badge>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Derick Maximinus</td>
-                          <td>2012/03/01</td>
-                          <td>Member</td>
-                          <td>
-                            <Badge color="warning">Pending</Badge>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Friderik Dávid</td>
-                          <td>2012/01/21</td>
-                          <td>Staff</td>
-                          <td>
-                            <Badge color="success">Active</Badge>
-                          </td>
-                        </tr>
-                        </tbody>
-                      </Table>
-                      </Col>
+                        <Form>
+                            <FormGroup row>
+                              <Label for="examplePassword" sm={2}>username</Label>
+                              <Col sm={10}>
+                                <Input type="text" name="text" id="text" value="pass333" />
+                              </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                              <Label for="exampleEmail" sm={2}>Email</Label>
+                              <Col sm={10}>
+                                <Input type="email" name="email" id="exampleEmail" value="pass333@naver.com"/>
+                              </Col>
+                            </FormGroup>
+
+                            <FormGroup row>
+                              <Label for="exampleText" sm={2}>Text Area</Label>
+                              <Col sm={10}>
+                                <Input type="textarea" name="text" id="exampleText" placeholder="자신을 소개해주세요!" />
+                              </Col>
+                            </FormGroup>
+                            
+                            <FormGroup check row>
+                              <Col sm={{ size: 10, offset: 2 }}>
+                                <Button>Submit</Button>
+                              </Col>
+                            </FormGroup>
+                          </Form>
+                        </Col>
                     </Row> 
                   </CardBody>
                 </Card>
