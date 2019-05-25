@@ -5,47 +5,35 @@ import Widget04 from '../../Widgets/Widget04'
 import {
   AppHeader,
 } from '@coreui/react';
-import UserInfo from './UserInfo';
-import UserInfoList from './UserInfoList';
-import UserForm from './UserForm';
 
 {/*const DefaultHeader = React.lazy(() => import('./HomeHeader'));*/}
 
 class Home_body extends Component {
-  id = 0
   state = {
-    i:0,
-    information: [
-      {
-        id: 0,
-        name: 'park333 / Park',
-        phone: 'sklds@naver.com'
-      },
-      {
-        id: 1,
-        name: 'llmoob / Michael',
-        phone: 'rose@google.com'
-      },
-      {
-        id: 2,
-        name: 'Simon / Simon',
-        phone: 'simon@google.com'
-      },
-      {
-        id: 3,
-        name: 'Hans / Jungu',
-        phone: 'hahhan@naver.com'
-      },
-      {
-        id: 4,
-        name: 'Dominic / TaeMin',
-        phone: 'dominic@daum.net'
-      }
-    ]
+    i: 1
   }
   handleClick = () => {
-    console.log(this.state.information[this.state.i++].id)
-    console.log('asd')
+    if(this.state.i==1){
+      var x = document.getElementById("one");
+      x.style.display="block";
+    }
+    if(this.state.i==2){
+      var x = document.getElementById("two");
+      x.style.display="block";
+    }
+    if(this.state.i==3){
+      var x = document.getElementById("three");
+      x.style.display="block";
+    }
+    if(this.state.i==4){
+      var x = document.getElementById("four");
+      x.style.display="block";
+    }
+    if(this.state.i==5){
+      var x = document.getElementById("five");
+      x.style.display="block";
+    }
+    console.log(this.state.i++)
   }
   render() {
     return (
@@ -56,17 +44,28 @@ class Home_body extends Component {
         </head>
       </div>
       <div>
-        <form>
-          <input type="password" placeholder="팀원명 입력"></input>
-        </form>
-      </div>
-      <div>
-        <UserForm
-          onCreate={this.handleCreate}
-        />
-        <UserInfoList data={this.state.information[this.state.i++]}/>
-        <input placeholder='팀원명 입력'></input>
-        <button type='button' onClick={()=>this.handleClick()}>LLL</button>
+        <input placeholder='팀원명 입력' style={{width:'50%'}}></input>
+        <button type='button' onClick={()=>this.handleClick()}>팀원 등록</button>
+      </div><br/><br/>
+      <div id='one' style={{display:'none', border: '1px solid black', padding: '8px', margin: '8px'}}>
+        <div><b>park333 / Park</b></div>
+        <div>sklds@naver.com</div>
+      </div><br/>
+      <div id='two' style={{display:'none', border: '1px solid black', padding: '8px', margin: '8px'}}>
+        <div><b>llmoob / Michael</b></div>
+        <div>rose@google.com</div>
+      </div><br/>
+      <div id='three' style={{display:'none', border: '1px solid black', padding: '8px', margin: '8px'}}>
+        <div><b>Simon / Simon</b></div>
+        <div>simon@google.com</div>
+      </div><br/>
+      <div id='four' style={{display:'none', border: '1px solid black', padding: '8px', margin: '8px'}}>
+        <div><b>Hans / Jungu</b></div>
+        <div>hahhan@naver.com</div>
+      </div><br/>
+      <div id='five' style={{display:'none', border: '1px solid black', padding: '8px', margin: '8px'}}>
+        <div><b>Dominic / TaeMin</b></div>
+        <div>dominic@daum.net</div>
       </div>
       
       </React.Fragment>
