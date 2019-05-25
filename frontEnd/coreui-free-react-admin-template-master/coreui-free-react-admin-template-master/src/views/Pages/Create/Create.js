@@ -3,7 +3,7 @@ import Home_body from './Home_body'
 import {
   AppHeader,
 } from '@coreui/react';
-
+import {Card, CardBody} from 'reactstrap';
 const DefaultHeader = React.lazy(() => import('./HomeHeader_Login'));
 
 class Create extends Component {
@@ -14,9 +14,14 @@ class Create extends Component {
         <AppHeader fixed>
             <DefaultHeader onLogout={e=>this.signOut(e)}/>      
         </AppHeader>
-        <div className="app-body" style={{width: '50%', height: '80%', justifyContent: 'center', marginLeft:'30%'}}>
+        <div className="app-body" style={{width: '50%', height: '80%', justifyContent: 'center', marginLeft:'25%'}}>
           <main className="main">
-            <Home_body/>
+            <br/>
+            <Card>
+              <CardBody>
+                <Home_body/>
+             </CardBody>
+            </Card>
           </main>
         </div>
         </div>
