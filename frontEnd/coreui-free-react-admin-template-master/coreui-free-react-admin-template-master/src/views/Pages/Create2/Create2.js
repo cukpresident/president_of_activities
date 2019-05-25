@@ -18,7 +18,7 @@ class Create2 extends Component {
         <div className="app-body">
           <main className="main">
             <Home_body/>
-            hello2
+            hello4
           </main>
         </div>
         </div>

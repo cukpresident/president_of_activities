@@ -14,7 +14,7 @@ class Create extends Component {
         <AppHeader fixed>
             <DefaultHeader onLogout={e=>this.signOut(e)}/>      
         </AppHeader>
-        <div className="app-body">
+        <div className="app-body" style={{width: '50%', height: '80%', justifyContent: 'center', margin:'auto'}}>
           <main className="main">
             <Home_body/>
           </main>
