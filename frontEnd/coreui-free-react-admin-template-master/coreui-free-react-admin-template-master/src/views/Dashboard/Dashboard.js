@@ -16,6 +16,9 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
+  Pagination,
+  PaginationItem,
+  PaginationLink,
   Progress,
   Row,
   Table,
@@ -368,24 +371,24 @@ function random(min, max) {
 }
 
 var elements = 27;
-var data1 = [];
-var data2 = [];
-var data3 = [];
-var data4 = [];
-var data5 = [];
+var data1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+var data2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+var data3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+var data4 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+var data5 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
 
 
 for (var i = 0; i <= elements; i++) {
-  data1.push(random(50, 200));
-  data2.push(random(80, 100));
-  data3.push(65);
-  data4.push(random(50, 200));
-  data5.push(random(50, 200));
+  // data1.push(random(50, 200));
+  //data2.push(random(80, 100));
+  //data3.push(65);
+  //data4.push(random(50, 200));
+  //data5.push(random(50, 200));
 
 }
 
 const mainChart = {
-  labels: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+  labels: [ '5/7', '5/8', '5/9', '5/10', '5/11', '5/12', '5/13', '5/14', '5/15', '5/16', '5/17', '5/18', '5/19', '5/20', '5/21', '5/22', '5/23', '5/24', '5/25', '5/26'],
   datasets: [
     {
       label: 'My First dataset',
@@ -462,8 +465,8 @@ const mainChartOpts = {
         ticks: {
           beginAtZero: true,
           maxTicksLimit: 5,
-          stepSize: Math.ceil(250 / 5),
-          max: 250,
+          stepSize: Math.ceil(100 / 5),
+          max: 100,
         },
       }],
   },
@@ -512,21 +515,9 @@ class Dashboard extends Component {
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-info">
               <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <ButtonDropdown id='card1' isOpen={this.state.card1} toggle={() => { this.setState({ card1: !this.state.card1 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="icon-settings"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem disabled>Disabled action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </ButtonDropdown>
-                </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                
+                <div className="text-value">5</div>
+                <div>Members</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Line data={cardChartData2} options={cardChartOpts2} height={70} />
@@ -537,20 +528,9 @@ class Dashboard extends Component {
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-primary">
               <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <Dropdown id='card2' isOpen={this.state.card2} toggle={() => { this.setState({ card2: !this.state.card2 }); }}>
-                    <DropdownToggle className="p-0" color="transparent">
-                      <i className="icon-location-pin"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                
+                <div className="text-value">5</div>
+                <div>진행중인 일</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Line data={cardChartData1} options={cardChartOpts1} height={70} />
@@ -561,20 +541,9 @@ class Dashboard extends Component {
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-warning">
               <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <Dropdown id='card3' isOpen={this.state.card3} toggle={() => { this.setState({ card3: !this.state.card3 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="icon-settings"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </Dropdown>
-                </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                
+                <div className="text-value">20</div>
+                <div>완료된 일</div>
               </CardBody>
               <div className="chart-wrapper" style={{ height: '70px' }}>
                 <Line data={cardChartData3} options={cardChartOpts3} height={70} />
@@ -585,20 +554,9 @@ class Dashboard extends Component {
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-danger">
               <CardBody className="pb-0">
-                <ButtonGroup className="float-right">
-                  <ButtonDropdown id='card4' isOpen={this.state.card4} toggle={() => { this.setState({ card4: !this.state.card4 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="icon-settings"></i>
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
-                    </DropdownMenu>
-                  </ButtonDropdown>
-                </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                
+                <div className="text-value">15</div>
+                <div>해야 될 일</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Bar data={cardChartData4} options={cardChartOpts4} height={70} />
@@ -606,36 +564,255 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
-        
+    
         <Row>
       <Col xs="12" sm="12" lg="6">
       <Card>
       <CardHeader>진행중인 TodoList</CardHeader>
       <CardBody>
       <ListGroup>
-        <ListGroupItem>Cras justo odio</ListGroupItem>
-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-        <ListGroupItem>Morbi leo risus</ListGroupItem>
-        <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+        <Badge  color="info">개발 / 유저 개발/ 유저 스토리라인 개발</Badge> {' '}
+        
+        <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+          주인공 개발
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+        
+       <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+          손님 1 개발
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+
+       <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+	        손님 2 개발
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+
+       <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+	        알바(여) 개발 {' '}
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+
+       <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+	알바(남) 개발 {' '}
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+
       </ListGroup>
       </CardBody>
       </Card>
         </Col>
+
         <Col xs="12" sm="12" lg="6">
       <Card>
-      <CardHeader>최근 완료된 TodoList</CardHeader>
+      <CardHeader>최근 완료된 목록</CardHeader>
       <CardBody>
       <ListGroup>
-        <ListGroupItem>Cras justo odio</ListGroupItem>
-        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-        <ListGroupItem>Morbi leo risus</ListGroupItem>
-        <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+        <Badge  color="info">개발 / 아이템 개발/ 붕어빵 개발</Badge> {' '}
+        
+        <ListGroupItem>
+        <Row>
+          <Col xs="12" sm="12" lg="5">
+          믹스 붕어빵 아이템 개발 {' '}
+          </Col>
+          <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>{' '}
+          </Col>
+          
+          <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+
+       </Row>
+       </ListGroupItem>
+
+
+       <ListGroupItem>
+       <Row>
+       <Col xs="12" sm="12" lg="5">
+       팥 붕어빵 아이템 개발 {' '}
+      </Col>
+       <Col xs="12" sm="12" lg="3">
+        <Badge color="warning">2019.04.01~
+        2019.04.10</Badge>{' '}
+        </Col> 
+       <Col xs="12" sm="12" lg="4">
+       <Badge color="secondary">simon</Badge> {'  '}
+       <Badge color="secondary">hans</Badge> {'  '}
+       <Badge color="secondary"> dominic</Badge> {'  '}
+       </Col>
+       </Row>
+       </ListGroupItem>
+
+       <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+        슈크림 붕어빵 아이템 개발
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+
+       <Badge  color="info">개발 / 상점 개발/ 붕어빵 상점 개발</Badge> {' '}
+       
+       <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+	손님 대화 개발 {' '}
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+
+       <ListGroupItem>
+       <Row>
+        <Col xs="12" sm="12" lg="5">
+	붕어빵 만들기 개발
+        </Col>
+        
+        <Col xs="12" sm="12" lg="3">
+          <Badge color="warning">2019.04.01~
+          2019.04.10</Badge>
+          </Col>
+
+        <Col xs="12" sm="12" lg="4">
+        <Badge color="secondary">simon</Badge> {'  '}
+        <Badge color="secondary">hans</Badge> {'  '}
+        <Badge color="secondary"> dominic</Badge> {'  '}
+        </Col>
+       </Row>
+       </ListGroupItem>
+      <br/>
+       <Row>
+         <Col sm={{size :5 , offset : 3}}>
+           <Pagination>
+              <PaginationItem>
+                <PaginationLink previous tag="button" />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink tag="button">
+                  1
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink tag="button">
+                  2
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink tag="button">
+                  3
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink tag="button">
+                  4
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink tag="button">
+                  5
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink next tag="button" />
+              </PaginationItem>
+            </Pagination>
+            </Col>
+       </Row>
       </ListGroup>
       </CardBody>
       </Card>
@@ -648,7 +825,7 @@ class Dashboard extends Component {
               <CardBody>
                 <Row>
                   <Col sm="5">
-                    <CardTitle className="mb-0">진행 상황</CardTitle>
+                    <CardTitle className="mb-0">최근 완료된 목록</CardTitle>
                     <div className="small text-muted">November 2015</div>
                   </Col>
                   
