@@ -4,7 +4,8 @@ import {
   AppHeader,
 } from '@coreui/react';
 import {Card, CardBody} from 'reactstrap';
-const DefaultHeader = React.lazy(() => import('./HomeHeader_Login'));
+const DefaultHeader = React.lazy(() => import('./../headers/HomeHeader'));
+
 
 {/* 로그인 안했을때!! */}
 class Create2 extends Component {
