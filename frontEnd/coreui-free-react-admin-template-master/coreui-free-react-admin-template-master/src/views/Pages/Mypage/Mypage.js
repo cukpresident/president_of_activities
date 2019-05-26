@@ -25,7 +25,7 @@ import {
   AppHeader,
 } from '@coreui/react';
 
-const DefaultHeader = React.lazy(() => import('./HomeHeader'));
+const DefaultHeader = React.lazy(() => import('./../headers/HomeHeader'));
 
 
 
