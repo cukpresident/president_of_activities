@@ -30,7 +30,7 @@ class tdList_P28 extends Component {
                     <td>개발</td>
                     <td rowSpan="4">2019.05.01<br/>~<br/>2019.05.08</td>
                     <td rowSpan="4">
-                      <Badge color="secondary">Do</Badge>
+                      <Badge color="danger">What to do</Badge>
                     </td>
                   </tr>
                   <tr>

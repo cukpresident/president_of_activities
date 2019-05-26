@@ -18,7 +18,12 @@ class Tabs extends Component {
     return(
       <React.Fragment>
       <ul>
-      <h5><a href="/#/tdpage30" target="DataList"><li><input type="checkbox" value="4" ></input> &nbsp; 물품 판매 테스트</li></a></h5>
+        <h5><a href="/#/tdpage25" target="DataList"><li><input type="checkbox" value="9" ></input> &nbsp; 주인공 개발</li></a></h5>
+        <h5><a href="/#/tdpage26" target="DataList"><li><input type="checkbox" value="10" ></input> &nbsp; 손님1 개발</li></a></h5>
+        <h5><a href="/#/tdpage27" target="DataList"><li><input type="checkbox" value="11" ></input> &nbsp; 손님2 개발</li></a></h5>
+        <h5><a href="/#/tdpage28" target="DataList"><li><input type="checkbox" value="12" ></input> &nbsp; 알바(남) 개발</li></a></h5>
+        <h5><a href="/#/tdpage29" target="DataList"><li><input type="checkbox" value="13" ></input> &nbsp; 알바(여) 개발</li></a></h5>
+        <h5><a href="/#/tdpage30" target="DataList"><li><input type="checkbox" value="4" ></input> &nbsp; 물품 판매 테스트</li></a></h5>
         <h5><a href="/#/tdpage31" target="DataList"><li><input type="checkbox" value="5" ></input> &nbsp; 물품 만들기 테스트</li></a></h5>
         <h5><a href="/#/tdpage32" target="DataList"><li><input type="checkbox" value="6" ></input> &nbsp; 로그인 테스트</li></a></h5>
         <h5><a href="/#/tdpage33" target="DataList"><li><input type="checkbox" value="7" ></input> &nbsp; 로그아웃 테스트</li></a></h5>
@@ -52,6 +57,9 @@ class Tabs extends Component {
         <h5><a href="/#/tdpage14" target="DataList"><li><input type="checkbox" value="14" checked></input> &nbsp; 판매 개발</li></a></h5>
         <h5><a href="/#/tdpage15" target="DataList"><li><input type="checkbox" value="15" checked></input> &nbsp; 만들기 개발</li></a></h5>
         <h5><a href="/#/tdpage16" target="DataList"><li><input type="checkbox" value="16" checked></input> &nbsp; 손님 대화 개발</li></a></h5>
+        <h5><a href="/#/tdpage17" target="DataList"><li><input type="checkbox" value="1" ></input> &nbsp; 슈크림 붕어빵 아이템 개발</li></a></h5>
+        <h5><a href="/#/tdpage18" target="DataList"><li><input type="checkbox" value="1" ></input> &nbsp; 팥 붕어빵 아이템 개발</li></a></h5>
+        <h5><a href="/#/tdpage19" target="DataList"><li><input type="checkbox" value="3" ></input> &nbsp; 믹스 붕어빵 아이템 개발</li></a></h5>
       </ul>
       </React.Fragment>
     );
@@ -60,19 +68,11 @@ class Tabs extends Component {
     return(
       <React.Fragment>
       <ul>
-        <h5><a href="/#/tdpage17" target="DataList"><li><input type="checkbox" value="1" ></input> &nbsp; 슈크림 붕어빵 아이템 개발</li></a></h5>
-        <h5><a href="/#/tdpage18" target="DataList"><li><input type="checkbox" value="1" ></input> &nbsp; 팥 붕어빵 아이템 개발</li></a></h5>
-        <h5><a href="/#/tdpage19" target="DataList"><li><input type="checkbox" value="3" ></input> &nbsp; 믹스 붕어빵 아이템 개발</li></a></h5>
         <h5><a href="/#/tdpage20" target="DataList"><li><input type="checkbox" value="4" ></input> &nbsp; 주인공 개발</li></a></h5>
         <h5><a href="/#/tdpage21" target="DataList"><li><input type="checkbox" value="5" ></input> &nbsp; 손님1 개발</li></a></h5>
         <h5><a href="/#/tdpage22" target="DataList"><li><input type="checkbox" value="6" ></input> &nbsp; 손님2 개발</li></a></h5>
         <h5><a href="/#/tdpage23" target="DataList"><li><input type="checkbox" value="7" ></input> &nbsp; 알바(남) 개발</li></a></h5>
         <h5><a href="/#/tdpage24" target="DataList"><li><input type="checkbox" value="8"></input> &nbsp; 알바(여) 개발</li></a></h5>
-        <h5><a href="/#/tdpage25" target="DataList"><li><input type="checkbox" value="9" ></input> &nbsp; 주인공 개발</li></a></h5>
-        <h5><a href="/#/tdpage26" target="DataList"><li><input type="checkbox" value="10" ></input> &nbsp; 손님1 개발</li></a></h5>
-        <h5><a href="/#/tdpage27" target="DataList"><li><input type="checkbox" value="11" ></input> &nbsp; 손님2 개발</li></a></h5>
-        <h5><a href="/#/tdpage28" target="DataList"><li><input type="checkbox" value="12" ></input> &nbsp; 알바(남) 개발</li></a></h5>
-        <h5><a href="/#/tdpage29" target="DataList"><li><input type="checkbox" value="13" ></input> &nbsp; 알바(여) 개발</li></a></h5>
       </ul>
       </React.Fragment>
     );

@@ -44,8 +44,8 @@ class Dashboard extends Component {
           <head>
                <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css"></link>
           </head>
-          <div>
-            
+
+          <div>  
           <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                   <thead className="thead-light">
                   <tr>
@@ -246,7 +246,6 @@ class Dashboard extends Component {
                   </tbody>
                 </Table>
                 </div>
-
   </div>
   </CardBody></Card>
   </Fragment>
