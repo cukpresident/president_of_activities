@@ -26,11 +26,11 @@ class HomeHeader extends Component {
           full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
         />
-        <AppSidebarToggler className="d-md-down-none" display="lg" />
+        <AppSidebarToggler className="d-md-down" display="lg" />
 
-        <Nav className="d-md-down-none" navbar>
+        <Nav className="d-md-down" navbar>
           <NavItem className="px-3">
-          <NavLink to="/show" className="nav-link" >프로젝트 둘러보기</NavLink>            
+            <NavLink to="/show" className="nav-link" >프로젝트 둘러보기</NavLink>
           </NavItem>
           <NavItem className="px-3">
             <Link to="/users" className="nav-link">프로젝트 생성</Link>

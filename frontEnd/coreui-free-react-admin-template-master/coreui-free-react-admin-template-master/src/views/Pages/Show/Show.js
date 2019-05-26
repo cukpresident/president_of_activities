@@ -1,13 +1,13 @@
 import React, { Component} from 'react';
-import Home_body from './Home_body'
+import Home_body from './Home_body';
 import {
   AppHeader,
 } from '@coreui/react';
 
-const DefaultHeader = React.lazy(() => import('./HomeHeader_Login'));
+const DefaultHeader = React.lazy(() => import('./HomeHeader'));
 
-{/* 로그인 했을때!! */}
-class Home2 extends Component {
+
+class Show extends Component {
   
   render() {
     return (
@@ -25,4 +25,5 @@ class Home2 extends Component {
   }
 }
 
-export default Home2;
+
+export default Show;

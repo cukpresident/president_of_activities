@@ -1,36 +1,61 @@
 import React, { Component} from 'react';
-import './HomebodyStyle.css'
-import Carousels from '../../Base/Carousels'
-import Widget04 from '../../Widgets/Widget04'
-import {
-  AppHeader,
-} from '@coreui/react';
-
-{/*const DefaultHeader = React.lazy(() => import('./HomeHeader'));*/}
+import { Badge, Card, CardBody, CardFooter, CardHeader, Col, Row, Collapse, Fade } from 'reactstrap';
+import './home.css';
 
 class Home_body extends Component {
   render() {
     return (
-      <React.Fragment>
+      // <React.Fragment>
       <div>
-      <div class="Style1">
-      <Widget04/><br/><br/>
-        <h1>이곳은 여러분들의 멋진 작업장이 될것입니다!</h1>
+      <Row>
+        <Col xs="12" sm="12">
+          <img id="Info1" src={'../../assets/img/project/main.PNG'} width="100%" height="90%" alt="img" />
+          </Col>
+        
+        </Row>
+        <div className="home_img">
+        <h1 className="home_title">  예시 프로젝트 보기</h1>
+        <br/>
+        <Row>
+          <Col xs="12" sm="5" md="3">
+            <Card>
+              <CardBody>
+              <img id="Info4" src={'../../assets/img/avatars/4.jpg'} width="100%" height="100%" alt="admin@bootstrapmaster.com" />                
+              </CardBody>
+              <CardFooter>Project Name 1</CardFooter>
+            </Card>
+          </Col>
+          
+          <Col xs="12" sm="5" md="3">
+            <Card>
+              <CardBody>
+              <img id="Info4" src={'../../assets/img/avatars/4.jpg'} width="100%" height="100%" alt="admin@bootstrapmaster.com" />
+              </CardBody>
+              <CardFooter>Project Name 1</CardFooter>
+            </Card>
+          </Col>
+
+          <Col xs="12" sm="5" md="3">
+            <Card>
+              <CardBody>
+              <img id="Info4" src={'../../assets/img/avatars/4.jpg'} width="100%" height="100%" alt="admin@bootstrapmaster.com" />
+              </CardBody>
+              <CardFooter>Card footer</CardFooter>
+            </Card>
+          </Col>
+          
+          <Col xs="12" sm="5" md="3">
+            <Card>
+              <CardBody>
+              <img id="Info4" src={'../../assets/img/avatars/4.jpg'} width="100%" height="100%" alt="admin@bootstrapmaster.com" />
+              </CardBody>
+              <CardFooter>Card footer</CardFooter>
+            </Card>
+          </Col>
+
+      </Row>
       </div>
-        <div class="Style2">
-        이 사이트는 여러분들의 프로젝트 진행의 매니저가 될것입니다.<br/>
-        이곳에서 여러분들의 실력을 마음껏 뽐내세요!<br/><br/><br/><br/>
         </div>
-        <Carousels/><br/><br/>
-        <div class="ImgStyle">
-        {/* 아래 사진들은 임의로 넣은것 (다른 홍보용 사진이나 아이콘 넣으면 될듯) */}
-          <img id="Info1" src={'../../assets/img/avatars/1.jpg'} width="25%" height="25%" alt="admin@bootstrapmaster.com" />
-          <img id="Info2" src={'../../assets/img/avatars/2.jpg'} width="25%" height="25%" alt="admin@bootstrapmaster.com" />
-          <img id="Info3" src={'../../assets/img/avatars/3.jpg'} width="25%" height="25%" alt="admin@bootstrapmaster.com" />
-          <img id="Info4" src={'../../assets/img/avatars/4.jpg'} width="25%" height="25%" alt="admin@bootstrapmaster.com" />
-        </div>
-        </div>
-      </React.Fragment>
     );
   }
 }

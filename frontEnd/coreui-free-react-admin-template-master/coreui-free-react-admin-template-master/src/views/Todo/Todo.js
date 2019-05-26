@@ -11,13 +11,14 @@ class Todo extends Component {
         <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css"></link>
         </head>
 
-        <div class="Todo_header"><div class="NameBox">김아형</div>&nbsp;&nbsp;
+        <div class="Todo_header"><div class="NameBox">park333</div>&nbsp;&nbsp;
         <form>
             <select name="Members">
-              <option value="김아형" selected>김아형</option>
-              <option value="이선민">이선민</option>
-              <option value="박두원">박두원</option>
-              <option value="하정구">하정구</option>
+              <option value="park333" selected>park333</option>
+              <option value="hans">hans</option>
+              <option value="simon">simon</option>
+              <option value="dominic">dominic</option>
+              <option value="llmoob">llmoob</option>
             </select>
           </form>
         </div>

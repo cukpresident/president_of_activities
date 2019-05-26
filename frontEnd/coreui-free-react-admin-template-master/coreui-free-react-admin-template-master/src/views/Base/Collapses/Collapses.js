@@ -188,42 +188,7 @@ class Collapses extends Component {
                 </div>
               </CardBody>
             </Card>
-            <Card>
-              <CardHeader>
-                <i className="fa fa-align-justify"></i> Collapse <small>custom accordion</small>
-                <div className="card-header-actions">
-                  <Badge>NEW</Badge>
-                </div>
-              </CardHeader>
-              <CardBody>
-                <div id="exampleAccordion" data-children=".item">
-                  <div className="item">
-                    <Button className="m-0 p-0" color="link" onClick={() => this.toggleCustom(0)} aria-expanded={this.state.custom[0]} aria-controls="exampleAccordion1">
-                      Toggle item
-                    </Button>
-                    <Collapse isOpen={this.state.custom[0]} data-parent="#exampleAccordion" id="exampleAccordion1">
-                      <p className="mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget
-                        tristique massa. Aliquam lacinia rhoncus nibh quis ornare.
-                      </p>
-                    </Collapse>
-                  </div>
-                  <div className="item">
-                    <Button className="m-0 p-0" color="link" onClick={() => this.toggleCustom(1)} aria-expanded={this.state.custom[1]} aria-controls="exampleAccordion2">
-                      Toggle item 2
-                    </Button>
-                    <Collapse isOpen={this.state.custom[1]} data-parent="#exampleAccordion" id="exampleAccordion2">
-                      <p className="mb-3">
-                        Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et
-                        malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes,
-                        nascetur ridiculus mus.
-                      </p>
-                    </Collapse>
-                  </div>
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
+            </Col>
         </Row>
       </div>
     );
