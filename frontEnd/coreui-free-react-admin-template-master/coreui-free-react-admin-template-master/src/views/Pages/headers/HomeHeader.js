@@ -65,7 +65,7 @@ class HomeHeader extends Component {
           
           <NavItem>
           <Link to="/mypage">
-            <button type="button" class="btn btn-ghost-primary">pass333님!  </button>
+            <button type="button" class="btn btn-ghost-primary">Park333님!  </button>
             </Link>
           </NavItem>
         </Nav>

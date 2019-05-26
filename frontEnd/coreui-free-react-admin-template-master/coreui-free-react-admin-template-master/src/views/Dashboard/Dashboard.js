@@ -371,10 +371,10 @@ function random(min, max) {
 }
 
 var elements = 27;
-var data1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-var data2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-var data3 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-var data4 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+var data1 = [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29];
+var data2 = [13,15,15,15,17,17,18,18,18,18,18,21,22,23,23,23,24,24,26,26];
+var data3 = [8,8,8,8,8,10,11,11,13,13,13,14,14,16,16,16,16,17,18,19];
+var data4 = [20,20,23,23,24,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27];
 var data5 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
 
 
@@ -464,8 +464,8 @@ const mainChartOpts = {
       {
         ticks: {
           beginAtZero: true,
-          maxTicksLimit: 5,
-          stepSize: Math.ceil(100 / 5),
+          maxTicksLimit: 4,
+          stepSize: Math.ceil(100 / 4),
           max: 100,
         },
       }],
@@ -474,7 +474,7 @@ const mainChartOpts = {
     point: {
       radius: 0,
       hitRadius: 10,
-      hoverRadius: 4,
+      hoverRadius: 1,
       hoverBorderWidth: 3,
     },
   },
@@ -837,29 +837,29 @@ class Dashboard extends Component {
               <CardFooter>
                 <Row className="text-center">
                   <Col sm={12} md className="mb-sm-2 mb-0">
-                    <div className="text-muted">Visits</div>
-                    <strong>29.703 Users (40%)</strong>
-                    <Progress className="progress-xs mt-2" color="success" value="40" />
+                    <div className="text-muted">Park</div>
+                    <strong>park333 (29%)</strong>
+                    <Progress className="progress-xs mt-2" color="success" value="29" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0 d-md-down-none">
-                    <div className="text-muted">Unique</div>
-                    <strong>24.093 Users (20%)</strong>
-                    <Progress className="progress-xs mt-2" color="info" value="20" />
+                    <div className="text-muted">Michael</div>
+                    <strong>llmoob (26%)</strong>
+                    <Progress className="progress-xs mt-2" color="info" value="26" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0">
-                    <div className="text-muted">Pageviews</div>
-                    <strong>78.706 Views (60%)</strong>
-                    <Progress className="progress-xs mt-2" color="warning" value="60" />
+                    <div className="text-muted">simon</div>
+                    <strong>Simon (19%)</strong>
+                    <Progress className="progress-xs mt-2" color="warning" value="19" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0">
-                    <div className="text-muted">New Users</div>
-                    <strong>22.123 Users (80%)</strong>
-                    <Progress className="progress-xs mt-2" color="danger" value="80" />
+                    <div className="text-muted">jungu</div>
+                    <strong>Hans (27%)</strong>
+                    <Progress className="progress-xs mt-2" color="danger" value="27" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0 d-md-down-none">
-                    <div className="text-muted">Bounce Rate</div>
-                    <strong>Average Rate (40.15%)</strong>
-                    <Progress className="progress-xs mt-2" color="primary" value="40" />
+                    <div className="text-muted">TaeMin</div>
+                    <strong>Dominic (19%)</strong>
+                    <Progress className="progress-xs mt-2" color="primary" value="19" />
                   </Col>
                 </Row>
               </CardFooter>

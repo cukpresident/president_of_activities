@@ -82,13 +82,13 @@ class Dashboard extends Component {
                     <td>
                       <div className="clearfix">
                         <div className="float-left">
-                          <strong>50%</strong>
+                          <strong>27%</strong>
                         </div>
                         <div className="float-right">
                           <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
                         </div>
                       </div>
-                      <Progress className="progress-xs" color="success" value="50" />
+                      <Progress className="progress-xs" color="success" value="29" />
                     </td>
                     <td>
                       <div className="small text-muted">Last login</div>
@@ -119,13 +119,13 @@ class Dashboard extends Component {
                     <td>
                       <div className="clearfix">
                         <div className="float-left">
-                          <strong>10%</strong>
+                          <strong>26%</strong>
                         </div>
                         <div className="float-right">
                           <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
                         </div>
                       </div>
-                      <Progress className="progress-xs" color="info" value="10" />
+                      <Progress className="progress-xs" color="info" value="26" />
                     </td>
                     <td>
                       <div className="small text-muted">Last login</div>
@@ -156,13 +156,13 @@ class Dashboard extends Component {
                     <td>
                       <div className="clearfix">
                         <div className="float-left">
-                          <strong>74%</strong>
+                          <strong>19%</strong>
                         </div>
                         <div className="float-right">
                           <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
                         </div>
                       </div>
-                      <Progress className="progress-xs" color="warning" value="74" />
+                      <Progress className="progress-xs" color="warning" value="19" />
                     </td>
                     <td>
                       <div className="small text-muted">Last login</div>
@@ -192,13 +192,13 @@ class Dashboard extends Component {
                     <td>
                       <div className="clearfix">
                         <div className="float-left">
-                          <strong>98%</strong>
+                          <strong>27%</strong>
                         </div>
                         <div className="float-right">
                           <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
                         </div>
                       </div>
-                      <Progress className="progress-xs" color="danger" value="98" />
+                      <Progress className="progress-xs" color="danger" value="27" />
                     </td>
                     <td>
                       <div className="small text-muted">Last login</div>
@@ -229,13 +229,13 @@ class Dashboard extends Component {
                     <td>
                       <div className="clearfix">
                         <div className="float-left">
-                          <strong>22%</strong>
+                          <strong>19%</strong>
                         </div>
                         <div className="float-right">
                           <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
                         </div>
                       </div>
-                      <Progress className="progress-xs" color="info" value="22" />
+                      <Progress className="progress-xs" color="info" value="19" />
                     </td>
                     <td>
                       <div className="small text-muted">Last login</div>

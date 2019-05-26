@@ -114,13 +114,13 @@ class Mypagedetail extends Component {
                             <FormGroup row>
                               <Label for="examplePassword" sm={2}>username</Label>
                               <Col sm={10}>
-                                <Input type="text" name="text" id="text" value="pass333" />
+                                <Input type="text" name="text" id="text" value="Park333" />
                               </Col>
                             </FormGroup>
                             <FormGroup row>
                               <Label for="exampleEmail" sm={2}>Email</Label>
                               <Col sm={10}>
-                                <Input type="email" name="email" id="exampleEmail" value="pass333@naver.com"/>
+                                <Input type="email" name="email" id="exampleEmail" value="Park333@naver.com"/>
                               </Col>
                             </FormGroup>
 
