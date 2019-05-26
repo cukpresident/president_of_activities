@@ -1,5 +1,6 @@
 
 import React, { Component, lazy, Suspense } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Bar, Line } from 'react-chartjs-2';
 import { Badge, Card, CardBody, CardHeader, Col, Pagination, PaginationItem, PaginationLink, Row, Table } from 'reactstrap';
 import Mypagedetail from './Mypagedetail';
@@ -48,7 +49,9 @@ class MyProjectListDetail extends Component {
                           </Col>
                           <Col xs="10" lg="2"> 
                           <br/><br/><br/><br/>
+                          <Link to = "/dashboard">
                           <Button block color="dark" className="btn-pill">ENTER</Button>
+                          </Link>
                           </Col>
 
                         {/* </Row> */}
