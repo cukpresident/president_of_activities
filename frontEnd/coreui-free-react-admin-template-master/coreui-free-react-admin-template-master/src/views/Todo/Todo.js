@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Todo_style.css'
 import Tabs from '../Base/Tabs'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class Todo extends Component {
-    render() {
-
+  render() {
     return (
       <div>
         <head>
@@ -23,6 +23,7 @@ class Todo extends Component {
           </form>
         </div>
         <Tabs/>
+
       </div>
     );
   }

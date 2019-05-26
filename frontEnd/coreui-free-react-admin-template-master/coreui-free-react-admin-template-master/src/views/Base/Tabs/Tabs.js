@@ -2,18 +2,42 @@ import React, {Component} from 'react';
 import {Badge, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane} from 'reactstrap';
 import classnames from 'classnames';
 import './Tabs_style.css';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class Tabs extends Component {
-
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.toggles=this.toggles.bind(this);
     this.state = {
+      i:1,
       activeTab: new Array(4).fill('1'),
+      modal:false
     };
   }
-
+  handleClick=()=>{
+    if(this.state.i==1){
+      var x = document.getElementById("one")
+      x.style.display="block"
+    }
+    if(this.state.i==2){
+      var x = document.getElementById("two")
+      x.style.display="block"
+    }
+    if(this.state.i==3){
+      var x = document.getElementById("three")
+      x.style.display="block"
+    }
+    this.state.i++
+    console.log(this.state.i)
+  }
+  toggles() {
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
+  } 
+  
   Will_do() {
     return(
       <React.Fragment>
@@ -30,9 +54,9 @@ class Tabs extends Component {
         <h5><a href="/#/tdpage34" target="DataList"><li><input type="checkbox" value="8"></input> &nbsp; 정보 불러오기 테스트</li></a></h5>
         <h5><a href="/#/tdpage35" target="DataList"><li><input type="checkbox" value="9" ></input> &nbsp; 마이페이지 테스트</li></a></h5>
         <h5><a href="/#/tdpage36" target="DataList"><li><input type="checkbox" value="10" ></input> &nbsp; 전체 테스트</li></a></h5>
-        <h5><a href="/#/tdpage37" target="DataList"><li><input type="checkbox" value="11" ></input> &nbsp; 앱스토어 구축</li></a></h5>
-        <h5><a href="/#/tdpage38" target="DataList"><li><input type="checkbox" value="12" ></input> &nbsp; 결과 발표ppt 완성</li></a></h5>
-        <h5><a href="/#/tdpage39" target="DataList"><li><input type="checkbox" value="13" ></input> &nbsp; 결과 발표 보고서 작성</li></a></h5>
+        <h5 id="one" style={{display:"none"}}><a href="/#/tdpage37" target="DataList"><li><input type="checkbox" value="11" ></input> &nbsp; 앱스토어 구축</li></a></h5>
+        <h5 id="two" style={{display:"none"}}><a href="/#/tdpage38" target="DataList"><li><input type="checkbox" value="12" ></input> &nbsp; 결과 발표ppt 완성</li></a></h5>
+        <h5 id="three" style={{display:"none"}}><a href="/#/tdpage39" target="DataList"><li><input type="checkbox" value="13" ></input> &nbsp; 결과 발표 보고서 작성</li></a></h5>
       </ul>
       </React.Fragment>
     );
@@ -102,6 +126,7 @@ class Tabs extends Component {
     );
   }
 
+
   render() {
     return (
       <div className="animated fadeIn">
@@ -135,109 +160,33 @@ class Tabs extends Component {
             </Nav>
             <TabContent activeTab={this.state.activeTab[0]}>
               {this.tabPane()}
-            </TabContent>
+            </TabContent><br/>
+
+            <Button type="button" color="danger" onClick={this.toggles}>Push TodoList</Button>
+        <Modal isOpen={this.state.modal} toggles={this.toggles} className={this.props.className}>
+          <ModalHeader toggles={this.toggles}>Pushing List!</ModalHeader>
+          <ModalBody>
+            <label for="Whattodo">Title : </label> <br/>
+            <textarea rows="2" cols="55" id="Whattodo"></textarea><br/><br/>
+            <label for="U">대분류 : </label> <br/>
+            <textarea rows="2" cols="55" id="U"></textarea><br/><br/>
+            <label for="M">중분류 : </label> <br/>
+            <textarea rows="2" cols="55" id="M"></textarea><br/><br/>
+            <label for="S">소분류 : </label> <br/>
+            <textarea rows="2" cols="55" id="S"></textarea><br/><br/>
+            <label for="P">기간 : </label> <br/>
+            <textarea rows="2" cols="55" id="P"></textarea><br/><br/>
+            <label for="mem">참여인원 : </label> <br/>
+            <textarea rows="2" cols="55" id="mem"></textarea><br/><br/>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={()=>{this.toggles(); this.handleClick();}}>Push!</Button>{' '}
+            <Button color="secondary" onClick={this.toggles}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
           </Col>
           <br/><br/>&nbsp;&nbsp;
           <iframe frameBorder="0" scrolling="no" name="Do_List" width="70%" height="710" name="DataList"></iframe>
-          {/*
-          <Col xs="12" md="6" className="mb-4">
-            <Nav tabs>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[1] === '1'}
-                  onClick={() => { this.toggle(1, '1'); }}
-                >
-                  <i className="icon-calculator"></i>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[1] === '2'}
-                  onClick={() => { this.toggle(1, '2'); }}
-                >
-                  <i className="icon-basket-loaded"></i>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[1] === '3'}
-                  onClick={() => { this.toggle(1, '3'); }}
-                >
-                  <i className="icon-pie-chart"></i>
-                </NavLink>
-              </NavItem>
-            </Nav>
-            <TabContent activeTab={this.state.activeTab[1]}>
-              {this.tabPane()}
-              </TabContent>
-          </Col>
-          <Col xs="12" md="6" className="mb-4">
-            <Nav tabs>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[2] === '1'}
-                  onClick={() => { this.toggle(2, '1'); }}
-                >
-                  <i className="icon-calculator"></i> <span className={this.state.activeTab[2] === '1' ? '' : 'd-none'}> Calculator</span>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[2] === '2'}
-                  onClick={() => { this.toggle(2, '2'); }}
-                >
-                  <i className="icon-basket-loaded"></i> <span
-                  className={this.state.activeTab[2] === '2' ? '' : 'd-none'}> Shopping cart</span>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  className={classnames({ active: this.state.activeTab[2] === '3' })}
-                  onClick={() => { this.toggle(2,'3'); }}
-                >
-                  <i className="icon-pie-chart"></i> <span className={this.state.activeTab[2] === '3' ? '' : 'd-none'}> Charts</span>
-                </NavLink>
-              </NavItem>
-            </Nav>
-            <TabContent activeTab={this.state.activeTab[2]}>
-              {this.tabPane()}
-            </TabContent>
-          </Col>
-          <Col xs="12" md="6" className="mb-4">
-            <Nav tabs>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[3] === '1'}
-                  onClick={() => { this.toggle(3, '1'); }}
-                >
-                  <i className="icon-calculator"></i>
-                  <span className={this.state.activeTab[3] === '1' ? '' : 'd-none'}> Calc</span>
-                  {'\u00A0'}<Badge color="success">New</Badge>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[3] === '2'}
-                  onClick={() => { this.toggle(3, '2'); }}
-                >
-                  <i className="icon-basket-loaded"></i>
-                  <span className={this.state.activeTab[3] === '2' ? '' : 'd-none'}> Cart</span>
-                  {'\u00A0'}<Badge pill color="danger">29</Badge>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  active={this.state.activeTab[3] === '3'}
-                  onClick={() => { this.toggle(3, '3'); }} >
-                    <i className="icon-pie-chart"></i>
-                    <span className={this.state.activeTab[3] === '3' ? '' : 'd-none'}> Charts</span>
-                </NavLink>
-              </NavItem>
-            </Nav>
-            <TabContent activeTab={this.state.activeTab[3]}>
-              {this.tabPane()}
-            </TabContent>
-          </Col>*/}
         </Row>
       </div>
     );
