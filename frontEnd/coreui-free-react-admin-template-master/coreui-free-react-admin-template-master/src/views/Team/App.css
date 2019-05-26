@@ -17,7 +17,23 @@
 .progress-handle{
   color : black;
   text-align: center;
-  background: #FFE082;
+  background: #FFF59D;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+}
+.progress-handle1{
+  color : black;
+  text-align: center;
+  background: #E6EE9C;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+}
+.progress-handle2{
+  color : black;
+  text-align: center;
+  background: #C5E1A5;
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;

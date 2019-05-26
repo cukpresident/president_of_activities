@@ -38,7 +38,7 @@ class ProgressBarex extends Component{
                 <div> 
                     <div id="category" style={{width : `${100-30}%`}}><h5>{this.props.title}</h5></div>
                     <div className="progress-bar" style={{width : `${100-30}%`}}>
-                        <div className="progress-handle" style={{width : `${this.props.percentage}%`}}>
+                        <div className="progress-handle2" style={{width : `${this.props.percentage}%`}}>
                             {this.props.percentage}%
                         </div>
                     </div>
@@ -70,7 +70,7 @@ class ProgressBarex extends Component{
                 <div id="see">
                     <div id="category" style={{width : `${100-15}%`}}  onClick={(hide)=>{this.toggle(hide)}}><h4>{this.props.title}</h4></div>
                     <div className={["progress-bar", "setup2"]} style={{width : `${100-15}%`}} onClick={(hide)=>{this.toggle(hide)}}>
-                        <div className="progress-handle" style={{width : `${this.props.percentage}%`}}>
+                        <div className="progress-handle1" style={{width : `${this.props.percentage}%`}}>
                             {this.props.percentage}%
                         </div>
                     </div>
