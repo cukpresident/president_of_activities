@@ -69,7 +69,7 @@ class ProgressBarex extends Component{
             return (
                 <div id="see">
                     <div id="category" style={{width : `${100-15}%`}}  onClick={(hide)=>{this.toggle(hide)}}><h4>{this.props.title}</h4></div>
-                    <div className={["progress-bar", "setup2"]} style={{width : `${100-15}%`}} onClick={(hide)=>{this.toggle(hide)}}>
+                    <div className={["progress-bar"]} style={{width : `${100-15}%`}} onClick={(hide)=>{this.toggle(hide)}}>
                         <div className="progress-handle1" style={{width : `${this.props.percentage}%`}}>
                             {this.props.percentage}%
                         </div>
