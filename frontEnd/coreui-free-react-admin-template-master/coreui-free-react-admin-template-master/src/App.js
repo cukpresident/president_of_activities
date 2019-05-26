@@ -16,6 +16,8 @@ const Login = React.lazy(() => import('./views/Pages/Login'));
 const Register = React.lazy(() => import('./views/Pages/Register'));
 const Page404 = React.lazy(() => import('./views/Pages/Page404'));
 const Page500 = React.lazy(() => import('./views/Pages/Page500'));
+const Create = React.lazy(() => import('./views/Pages/Create'));
+const Create2 = React.lazy(() => import('./views/Pages/Create2'));
 const Show = React.lazy(() => import('./views/Pages/Show'));
 const Todolist_page1 = React.lazy(() => import('./views/Pages/Todolist_page/tdList_P1'));
 const Todolist_page2 = React.lazy(() => import('./views/Pages/Todolist_page/tdList_P2'));
@@ -59,6 +61,7 @@ const Todolist_page39 = React.lazy(() => import('./views/Pages/Todolist_page/tdL
 
 
 
+
 class App extends Component {
 
   render() {
@@ -73,6 +76,9 @@ class App extends Component {
               <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />
               <Route exact path="/404" name="Page 404" render={props => <Page404 {...props}/>} />
               <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
+              <Route exact path="/create" name="Create" render={props => <Create {...props}/>} />
+              <Route exact path="/create2" name="Creat2" render={props => <Create2 {...props}/>} />
+
               <Route exact path="/show" name="Show" render={props => <Show {...props}/>} />
               <Route exact path="/tdpage1" name="tdlist page1" render={props => <Todolist_page1 {...props}/>} />
               <Route exact path="/tdpage2" name="tdlist page2" render={props => <Todolist_page2 {...props}/>} />
