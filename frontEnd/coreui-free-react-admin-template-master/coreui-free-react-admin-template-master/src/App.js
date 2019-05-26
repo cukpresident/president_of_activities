@@ -58,6 +58,7 @@ const Todolist_page36 = React.lazy(() => import('./views/Pages/Todolist_page/tdL
 const Todolist_page37 = React.lazy(() => import('./views/Pages/Todolist_page/tdList_P37'));
 const Todolist_page38 = React.lazy(() => import('./views/Pages/Todolist_page/tdList_P38'));
 const Todolist_page39 = React.lazy(() => import('./views/Pages/Todolist_page/tdList_P39'));
+const InitTodo = React.lazy(() => import('./views/Pages/Todolist_page/initTodo'));
 
 
 
@@ -78,7 +79,6 @@ class App extends Component {
               <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
               <Route exact path="/create" name="Create" render={props => <Create {...props}/>} />
               <Route exact path="/create2" name="Creat2" render={props => <Create2 {...props}/>} />
-
               <Route exact path="/show" name="Show" render={props => <Show {...props}/>} />
               <Route exact path="/tdpage1" name="tdlist page1" render={props => <Todolist_page1 {...props}/>} />
               <Route exact path="/tdpage2" name="tdlist page2" render={props => <Todolist_page2 {...props}/>} />
@@ -119,6 +119,7 @@ class App extends Component {
               <Route exact path="/tdpage37" name="tdlist page11" render={props => <Todolist_page37 {...props}/>} />
               <Route exact path="/tdpage38" name="tdlist page12" render={props => <Todolist_page38 {...props}/>} />
               <Route exact path="/tdpage39" name="tdlist page12" render={props => <Todolist_page39 {...props}/>} />
+              <Route exact path="/inittodo" name="init todo" render={props => <InitTodo {...props}/>} />
               <Route path="/" name="Home" render={props => <DefaultLayout {...props}/>} />
             </Switch>
           </React.Suspense>

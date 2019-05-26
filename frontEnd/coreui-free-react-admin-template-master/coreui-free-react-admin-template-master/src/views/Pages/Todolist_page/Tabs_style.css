@@ -1,0 +1,13 @@
+li:hover{
+    color:#6495ed;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:none;
+}
+a:link{
+    color:black;
+}
+a:visited{
+    color:black
+}

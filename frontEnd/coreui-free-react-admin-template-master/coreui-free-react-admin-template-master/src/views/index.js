@@ -31,11 +31,13 @@ import Widgets from './Widgets';
 import Members from './Members/Team';
 import Todo from './Todo';
 import Team from './Team';
+import initTodo from './Pages/Todolist_page/initTodo'
 
 
 export {
   Team,
   Todo,
+  initTodo,
   Members,
   Badges,
   Typography,
