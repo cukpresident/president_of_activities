@@ -35,7 +35,8 @@
     "react-test-renderer": "^16.8.5",
     "react-vertical-timeline-component": "^2.3.1",
     "reactstrap": "^7.1.0",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "vertical-timeline-component-for-react": "^1.0.6"
   },
   "devDependencies": {
     "react-scripts": "^2.1.8"
