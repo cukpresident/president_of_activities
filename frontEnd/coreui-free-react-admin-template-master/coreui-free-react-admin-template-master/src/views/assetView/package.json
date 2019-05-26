@@ -1,0 +1,6 @@
+{
+  "name": "assetView",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./assetView.js"
+}
