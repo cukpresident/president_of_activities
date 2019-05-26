@@ -132,8 +132,8 @@ class Mypagedetail extends Component {
                             </FormGroup>
                             
                             <FormGroup check row>
-                              <Col sm={{ size: 10, offset: 2 }}>
-                                <Button>Submit</Button>
+                              <Col sm={{ size: 10, offset: 11 }}>
+                                <Button>Update!</Button>
                               </Col>
                             </FormGroup>
                           </Form>
